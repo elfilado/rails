@@ -1,0 +1,17 @@
+<!-- app/views/products/new.html.erb -->
+
+<%= form_with(model: @product, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :price %>
+  <%= form.number_field :price %>
+
+  <%= form.label :stock %>
+  <%= form.number_field :stock %>
+
+  <%= form.submit 'Create Product' %>
+<% end %>

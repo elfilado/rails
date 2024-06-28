@@ -1,0 +1,9 @@
+<h1>Profile</h1>
+
+<p>Email: <%= @user.email %></p>
+
+<% if @user.seller %>
+  <p>You are a seller</p>
+<% else %>
+  <%= button_to "Become a Seller", become_seller_user_path(current_user), method: :patch %>
+<% end %>
